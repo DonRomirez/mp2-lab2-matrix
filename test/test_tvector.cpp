@@ -103,12 +103,11 @@ TEST(TVector, assign_operator_change_vector_size)
 	EXPECT_EQ(20, check);
 }
 
-TEST(TVector, can_assign_vectors_of_different_size)//?
+TEST(TVector, can_assign_vectors_of_different_size)// векторы совпадут(со значениями)
 {
 	TVector<int> v(10), v1(20);
 	v = v1;
-	int check = v.GetSize();
-	EXPECT_EQ(20, check);
+	EXPECT_EQ(1, v==v1);
 }
 
 TEST(TVector, compare_equal_vectors_return_true)
